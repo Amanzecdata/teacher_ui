@@ -1499,7 +1499,8 @@ function addStripePayment(isNew, id, price, checked, posU) {
 
 function sendUpdates() {
   console.log("send updates---");
-  var lesson_name = $("#lesson_name").val();
+  var lesson_name = $("#lesson-name").val();
+  console.log({lesson_name});
   var lesson_visiblity = $("#lesson_is_public").prop("checked");
   var meta_attributes = [];
   var isValid = true;
@@ -2248,7 +2249,7 @@ $(document).ready(function () {
         );
         $("#payments").attr("href", "/payments.html?lesson_id=" + lesson_id);
 
-        $("#lesson_name").val(response.lesson_name);
+        $("#lesson-name").val(response.lesson_name);
         $("#lesson_is_public").prop("checked", response.lesson_is_public);
         $("title").text(response.lesson_name + " - edit..");
 
@@ -2586,11 +2587,12 @@ $(document).ready(function () {
     getAllLessons();
   }
 
+  console.log({lesson_name});
   $("#lesson_form").submit((e) => {
     $('#create-new-lesson-modal').addClass('hide');
     e.preventDefault();
     sendUpdates();
-    var lesson_name = $("#lesson_name").val();
+    var lesson_name = $("#lesson-name").val();
     var lesson_type = $("#selectsegment").val();
     const param = new URL(window.location.href);
     const params = param.searchParams.get("params");

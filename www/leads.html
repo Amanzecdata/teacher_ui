@@ -37,7 +37,7 @@
      <script src="https://cdn.datatables.net/select/1.3.3/js/dataTables.select.min.js"></script>
      <link rel="stylesheet" type="text/css"
           href="https://cdn.datatables.net/select/1.3.3/css/select.dataTables.min.css" />
-          
+
      <!-- user.html JS, CSS end -->
 
      <link rel="stylesheet" href="css/dashboard.css" />
@@ -203,12 +203,12 @@
                                                        <th>Call Member</th>
                                                        <th>Message Member</th> 
                                                   </tr> -->
-                                             </thead >
+                                             </thead>
                                              <tbody id="lead_data">
                                              </tbody>
                                         </table>
 
-                                   <!-- <div id="lead_loader" class="d-flex justify-content-center">
+                                        <!-- <div id="lead_loader" class="d-flex justify-content-center">
                                                   <svg style="height: auto; width: 120px;" version="1.1"
                                                        xmlns="http://www.w3.org/2000/svg"
                                                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="25 25 50 50">
@@ -220,15 +220,15 @@
                                                   </svg>
                                              </div> -->
 
-                                   <!-- </div> -->
-                                        </div>
+                                        <!-- </div> -->
+                                   </div>
 
 
-                              <!-- <div class="table-div">
+                                   <!-- <div class="table-div">
                                         <div id="lead_table">
 
                                         </div> -->
-                              <!-- <table id="lead_table" class="table table-striped table-bordered" style="width: 100%">
+                                   <!-- <table id="lead_table" class="table table-striped table-bordered" style="width: 100%">
                                              <thead >
                                                   <tr id="lead_header">
                                                      
@@ -237,7 +237,7 @@
                                              <tbody id="lead_data">
                                              </tbody>
                                         </table> -->
-                              <!-- <div id="lead_loader" class="d-flex justify-content-center">
+                                   <!-- <div id="lead_loader" class="d-flex justify-content-center">
                                              <svg style="height: auto; width: 120px;" version="1.1"
                                                   xmlns="http://www.w3.org/2000/svg"
                                                   xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="25 25 50 50">
@@ -251,460 +251,472 @@
                                    </div>
                               </div> -->
 
-                              <!-- add new lead to db -->
-                              <div id="addLead" style='display:none'>
-                                   <div>
-                                        <button onclick="goBack()" class="btn">
-                                             <i class="fa fa-chevron-left"></i> Back
-                                        </button>
-                                   </div>
-
-                                   <h2 class="text-center">
-                                        <b id="addTitle">Add New Lead</b>
-                                   </h2>
-
-                                   <form class="pt-2 pt-3">
-                                        <div class="form-group">
-                                             <label for="first_name">First Name</label>
-                                             <input type="text" class="form-control" id="first_name"
-                                                  placeholder="First Name" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="last_name">Last Name</label>
-                                             <input type="text" class="form-control" id="last_name"
-                                                  placeholder="Last Name" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label class="d-block" for="phone">Phone</label>
-                                             <input type="phone" class="form-control" id="phone" placeholder="Phone" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="email">email</label>
-                                             <input type="email" class="form-control" id="email" placeholder="email" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="state">State</label>
-                                             <input type="text" class="form-control" id="state" placeholder="State" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="ask">Ask</label>
-                                             <input type="text" class="form-control" id="ask" placeholder="Ask" />`
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="new_notes">Notes</label>
-                                             <input type="text" class="form-control" id="new_notes"
-                                                  placeholder="full Notes" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="new_url">Zillow url</label>
-                                             <input type="text" class="form-control" id="new_url"
-                                                  placeholder="Zillow url" />
-                                        </div>
-                                        <button type="button" id="save_new_lead" class="btn btn-primary">
-                                             Submit
-                                        </button>
-                                   </form>
-                              </div>
-
-                              <!-- edit user-lead -->
-                              <div id="editLeadModel" style='display:none'>
-                                   <div>
-                                        <button onclick="goBackEdit()" class="btn">
-                                             <i class="fa fa-chevron-left"></i> Back
-                                        </button>
-
-                                        <button class="btn btn-danger float-right" id="deleteLead">
-                                             <i class="fa fa-trash"></i> Delete
-                                        </button>
-                                   </div>
-
-                                   <h2 class="text-center">
-                                        <b id="addTitle">Edit Lead</b>
-                                   </h2>
-
-                                   <form class="pt-2 pt-3">
-                                        <div class="form-group">
-                                             <label for="edit_first_name">First Name</label>
-                                             <input type="text" class="form-control" id="edit_first_name"
-                                                  placeholder="First Name" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_last_name">Last Name</label>
-                                             <input type="text" class="form-control" id="edit_last_name"
-                                                  placeholder="Last Name" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_phone">Phone</label>
-                                             <input type="phone" class="form-control" id="edit_phone"
-                                                  placeholder="Phone" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_email">email</label>
-                                             <input type="email" class="form-control" id="edit_email"
-                                                  placeholder="email" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_state">State</label>
-                                             <input type="text" class="form-control" id="edit_state"
-                                                  placeholder="State" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_ask">Ask</label>
-                                             <input type="text" class="form-control" id="edit_ask" placeholder="Ask" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_notes">Notes</label>
-                                             <input type="text" class="form-control" id="edit_notes"
-                                                  placeholder="full Notes" />
-                                        </div>
-                                        <div class="form-group">
-                                             <label for="edit_url">Zillow url</label>
-                                             <input type="text" class="form-control" id="edit_url"
-                                                  placeholder="Zillow url" />
-                                        </div>
+                                   <!-- add new lead to db -->
+                                   <div id="addLead" style='display:none'>
                                         <div>
-                                             <label for="edit_status">select status</label>
-                                             <select class="form-control" id="edit_status">
-                                                  <option value="-" selected="">-</option>
-                                                  <option value="Call back later">Call back later</option>
-                                                  <option value="not interested">not interested</option>
-                                             </select><br>
+                                             <button onclick="goBack()" class="btn">
+                                                  <i class="fa fa-chevron-left"></i> Back
+                                             </button>
                                         </div>
-                                        <button type="button" id="submitLead" class="btn btn-primary">
-                                             Submit
-                                        </button>
-                                   </form>
-                              </div>
 
+                                        <h2 class="text-center">
+                                             <b id="addTitle">Add New Lead</b>
+                                        </h2>
 
-                              <!-- overlay  csv uploder  -->
-                              <div class="modal fade" id="csvModel" tabindex="-1" aria-labelledby="csvModel"
-                                   role="dialog" aria-hidden="true">
-                                   <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                             <div class="modal-header">
-                                                  <h5 class="modal-title">
-                                                       upload a csv file
-                                                  </h5>
-                                                  <button type="button" class="close" data-dismiss="modal"
-                                                       aria-label="Close">
-                                                       <span aria-hidden="true">&times;</span>
-                                                  </button>
+                                        <form class="pt-2 pt-3">
+                                             <div class="form-group">
+                                                  <label for="first_name">First Name</label>
+                                                  <input type="text" class="form-control" id="first_name"
+                                                       placeholder="First Name" />
                                              </div>
-                                             <div class="modal-body">
-                                                  <div class="form-group" style="margin-top: 10px;">
-
-                                                       <div class="csv-format">
-                                                            <a href="sample.csv" download="sample.csv">Download csv
-                                                                 format</a>
-                                                       </div>
-                                                       <div class="form-group">
-                                                            <label for="csvFile">choose csv file</label>
-                                                            <input type="file" name="csvFile" class="form-control"
-                                                                 id="csvFile" required />
-                                                       </div>
-                                                       <div class="modal-footer">
-                                                            <button class="btn btn-primary float-right" id="uplodCsv"
-                                                                 type="submit"><i
-                                                                      class="fal fa-file-csv"></i>Upload</button>
-                                                       </div>
-                                                  </div>
+                                             <div class="form-group">
+                                                  <label for="last_name">Last Name</label>
+                                                  <input type="text" class="form-control" id="last_name"
+                                                       placeholder="Last Name" />
                                              </div>
-                                        </div>
+                                             <div class="form-group">
+                                                  <label class="d-block" for="phone">Phone</label>
+                                                  <input type="phone" class="form-control" id="phone"
+                                                       placeholder="Phone" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="email">email</label>
+                                                  <input type="email" class="form-control" id="email"
+                                                       placeholder="email" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="state">State</label>
+                                                  <input type="text" class="form-control" id="state"
+                                                       placeholder="State" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="ask">Ask</label>
+                                                  <input type="text" class="form-control" id="ask" placeholder="Ask" />`
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="new_notes">Notes</label>
+                                                  <input type="text" class="form-control" id="new_notes"
+                                                       placeholder="full Notes" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="new_url">Zillow url</label>
+                                                  <input type="text" class="form-control" id="new_url"
+                                                       placeholder="Zillow url" />
+                                             </div>
+                                             <button type="button" id="save_new_lead" class="btn btn-primary">
+                                                  Submit
+                                             </button>
+                                        </form>
                                    </div>
-                              </div>
-                              <!-- csv uploder over -->
 
+                                   <!-- edit user-lead -->
+                                   <div id="editLeadModel" style='display:none'>
+                                        <div>
+                                             <button onclick="goBackEdit()" class="btn">
+                                                  <i class="fa fa-chevron-left"></i> Back
+                                             </button>
 
-                              <!--select number  1'st overlay  -->
-                              <div class="modal fade" id="selectNumberModel" tabindex="-1"
-                                   aria-labelledby="selectNumberModel" role="dialog" aria-hidden="true">
-                                   <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                             <div class="modal-header">
-                                                  <h5 class="modal-title">
-                                                       select Number
-                                                  </h5>
-                                                  <button type="button" class="close" data-dismiss="modal"
-                                                       aria-label="Close">
-                                                       <span aria-hidden="true">&times;</span>
-                                                  </button>
+                                             <button class="btn btn-danger float-right" id="deleteLead">
+                                                  <i class="fa fa-trash"></i> Delete
+                                             </button>
+                                        </div>
+
+                                        <h2 class="text-center">
+                                             <b id="addTitle">Edit Lead</b>
+                                        </h2>
+
+                                        <form class="pt-2 pt-3">
+                                             <div class="form-group">
+                                                  <label for="edit_first_name">First Name</label>
+                                                  <input type="text" class="form-control" id="edit_first_name"
+                                                       placeholder="First Name" />
                                              </div>
-                                             <div class="modal-body">
-                                                  <div class="form-group" style="margin-top: 10px;">
-                                                       <div class="form-group">
-                                                            <label for="sourceCallNumber">select source Number</label>
-                                                            <select class="form-control" id="sourceCallNumber">
-                                                                 <option value="Select Source Number" selected>Select
-                                                                      Source Number</option>
-                                                                 <option selected="selected" value="(425) 578-5798">
-                                                                      (425) 578-5798</option>
-                                                            </select>
-                                                       </div>
-                                                       <div class="form-group">
-                                                            <label for="dest_num_call">Destination number</label>
-                                                            <input type="tel" class="form-control" id="dest_num_call"
-                                                                 disabled placeholder="Dest Number" required />
-                                                       </div>
-                                                       <div class="form-group">
-                                                            <label for="yourNumber">your number</label>
-                                                            <div id="addField">
-                                                                 <input type="tel" class="form-control" id="yourNumber"
-                                                                      placeholder="Your Number for join_conference"
-                                                                      required />
-                                                                 <button><i class="fa fa-plus" id="addNum"
-                                                                           aria-hidden="true"></i></button>
+                                             <div class="form-group">
+                                                  <label for="edit_last_name">Last Name</label>
+                                                  <input type="text" class="form-control" id="edit_last_name"
+                                                       placeholder="Last Name" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="edit_phone">Phone</label>
+                                                  <input type="phone" class="form-control" id="edit_phone"
+                                                       placeholder="Phone" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="edit_email">email</label>
+                                                  <input type="email" class="form-control" id="edit_email"
+                                                       placeholder="email" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="edit_state">State</label>
+                                                  <input type="text" class="form-control" id="edit_state"
+                                                       placeholder="State" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="edit_ask">Ask</label>
+                                                  <input type="text" class="form-control" id="edit_ask"
+                                                       placeholder="Ask" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="edit_notes">Notes</label>
+                                                  <input type="text" class="form-control" id="edit_notes"
+                                                       placeholder="full Notes" />
+                                             </div>
+                                             <div class="form-group">
+                                                  <label for="edit_url">Zillow url</label>
+                                                  <input type="text" class="form-control" id="edit_url"
+                                                       placeholder="Zillow url" />
+                                             </div>
+                                             <div>
+                                                  <label for="edit_status">select status</label>
+                                                  <select class="form-control" id="edit_status">
+                                                       <option value="-" selected="">-</option>
+                                                       <option value="Call back later">Call back later</option>
+                                                       <option value="not interested">not interested</option>
+                                                  </select><br>
+                                             </div>
+                                             <button type="button" id="submitLead" class="btn btn-primary">
+                                                  Submit
+                                             </button>
+                                        </form>
+                                   </div>
+
+
+                                   <!-- overlay  csv uploder  -->
+                                   <div class="modal fade" id="csvModel" tabindex="-1" aria-labelledby="csvModel"
+                                        role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                             <div class="modal-content">
+                                                  <div class="modal-header">
+                                                       <h5 class="modal-title">
+                                                            upload a csv file
+                                                       </h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                       <div class="form-group" style="margin-top: 10px;">
+
+                                                            <div class="csv-format">
+                                                                 <a href="sample.csv" download="sample.csv">Download csv
+                                                                      format</a>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                 <label for="csvFile">choose csv file</label>
+                                                                 <input type="file" name="csvFile" class="form-control"
+                                                                      id="csvFile" required />
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                 <button class="btn btn-primary float-right"
+                                                                      id="uplodCsv" type="submit"><i
+                                                                           class="fal fa-file-csv"></i>Upload</button>
                                                             </div>
                                                        </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!-- csv uploder over -->
+
+
+                                   <!--select number  1'st overlay  -->
+                                   <div class="modal fade" id="selectNumberModel" tabindex="-1"
+                                        aria-labelledby="selectNumberModel" role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                             <div class="modal-content">
+                                                  <div class="modal-header">
+                                                       <h5 class="modal-title">
+                                                            select Number
+                                                       </h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                       <div class="form-group" style="margin-top: 10px;">
+                                                            <div class="form-group">
+                                                                 <label for="sourceCallNumber">select source
+                                                                      Number</label>
+                                                                 <select class="form-control" id="sourceCallNumber">
+                                                                      <option value="Select Source Number" selected>
+                                                                           Select
+                                                                           Source Number</option>
+                                                                      <option selected="selected"
+                                                                           value="(425) 578-5798">
+                                                                           (425) 578-5798</option>
+                                                                 </select>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                 <label for="dest_num_call">Destination number</label>
+                                                                 <input type="tel" class="form-control"
+                                                                      id="dest_num_call" placeholder="Dest Number"
+                                                                      required value={} />
+                                                            </div>
+                                                            <div class="form-group">
+                                                                 <label for="yourNumber">your number</label>
+                                                                 <div id="addField">
+                                                                      <input type="tel" class="form-control"
+                                                                           id="yourNumber"
+                                                                           placeholder="Your Number for join_conference"
+                                                                           required />
+                                                                      <button><i class="fa fa-plus" id="addNum"
+                                                                                aria-hidden="true"></i></button>
+                                                                 </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                 <button class="btn btn-primary float-right"
+                                                                      id="makeCall" type="button"><i
+                                                                           class="fa fa-phone-square"></i>
+                                                                      Call</button>
+                                                            </div>
+                                                       </div>
+                                                  </div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!-- 2'nd overlay Add notes on number called -->
+                                   <div class="modal fade" id="notesModal" aria-labelledby="notesModal" tabindex="-1"
+                                        role="dialog" aria-hidden="true">
+                                        <div class="modal-dialog" role="document">
+                                             <div class="modal-content">
+                                                  <div class="modal-header">
+                                                       <h5 class="modal-title">
+                                                            Enter the notes for this Member
+                                                       </h5>
+                                                       <button type="button" class="close" data-dismiss="modal"
+                                                            aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                       </button>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                       <div id="music_files"></div>
+                                                       <br><br>
+                                                       <div id="Zillow_url"></div>
+                                                       <div class="form-group" style="margin-top: 10px;">
+                                                            <label for="status_val">select status</label>
+                                                            <select class="form-control" id="status_val">
+                                                                 <option value="-" selected="">-</option>
+                                                                 <option value="Call back later">Call back later
+                                                                 </option>
+                                                                 <option value="not interested">not interested</option>
+                                                            </select><br>
+                                                            <label for="phone">Notes</label>
+                                                            <textarea class="form-control" id="notes_call"
+                                                                 placeholder="write Notes"></textarea>
+                                                            <label for="edit_first_name">First Name</label>
+                                                            <input type="text" class="form-control"
+                                                                 id="edit_first_nameid" placeholder="First Name" />
+                                                            <label for="edit_last_name">Last Name</label>
+                                                            <input type="text" class="form-control"
+                                                                 id="edit_last_nameid" placeholder="Last Name" />
+                                                            <label for="edit_phone">Phone</label>
+                                                            <input type="phone" class="form-control" id="edit_phoneid"
+                                                                 placeholder="Phone" />
+                                                            <label for="edit_email">email</label>
+                                                            <input type="email" class="form-control" id="edit_emailid"
+                                                                 placeholder="email" />
+                                                            <label for="edit_state">State</label>
+                                                            <input type="text" class="form-control" id="edit_stateid"
+                                                                 placeholder="State" />
+                                                            <label for="edit_ask">Ask</label>
+                                                            <input type="text" class="form-control" id="edit_askid"
+                                                                 placeholder="Ask" />
+                                                            <label for="edit_ask">Tax Overdue</label>
+                                                            <input type="text" class="form-control"
+                                                                 id="edit_Tax_Overdueid" placeholder="Ask" />
+                                                            <label for="edit_ask">Contact Id</label>
+                                                            <input type="text" class="form-control"
+                                                                 id="edit_Contact_Idid" placeholder="Ask" />
+                                                            <label for="edit_ask">Last call</label>
+                                                            <input type="text" class="form-control"
+                                                                 id="edit_Last_callid" placeholder="Ask" />
+                                                            <label for="edit_ask">Last Dial Number</label>
+                                                            <input type="text" class="form-control"
+                                                                 id="edit_Last_Dial_Numberid" placeholder="Ask" />
+                                                       </div>
                                                        <div class="modal-footer">
-                                                            <button class="btn btn-primary float-right" id="makeCall"
-                                                                 type="button"><i class="fa fa-phone-square"></i>
-                                                                 Call</button>
+                                                            <button type="button" id="send_smsid" onclick="sendText()"
+                                                                 class="btn btn-primary float-right">
+                                                                 send sms
+                                                            </button>
+                                                            <button type="button" id="save_notes"
+                                                                 class="btn btn-primary float-right">
+                                                                 save
+                                                            </button>
+                                                            <button type="button" id="next_call"
+                                                                 class="btn btn-primary float-right">
+                                                                 next
+                                                            </button>
+                                                            <button type="button" id="add_call"
+                                                                 class="btn btn-primary float-right">
+                                                                 Add other call
+                                                            </button>
                                                        </div>
                                                   </div>
                                              </div>
                                         </div>
                                    </div>
                               </div>
-                              <!-- 2'nd overlay Add notes on number called -->
-                              <div class="modal fade" id="notesModal" aria-labelledby="notesModal" tabindex="-1"
-                                   role="dialog" aria-hidden="true">
-                                   <div class="modal-dialog" role="document">
-                                        <div class="modal-content">
-                                             <div class="modal-header">
-                                                  <h5 class="modal-title">
-                                                       Enter the notes for this Member
-                                                  </h5>
-                                                  <button type="button" class="close" data-dismiss="modal"
-                                                       aria-label="Close">
-                                                       <span aria-hidden="true">&times;</span>
-                                                  </button>
-                                             </div>
-                                             <div class="modal-body">
-                                                  <div id="music_files"></div>
-                                                  <br><br>
-                                                  <div id="Zillow_url"></div>
-                                                  <div class="form-group" style="margin-top: 10px;">
-                                                       <label for="status_val">select status</label>
-                                                       <select class="form-control" id="status_val">
-                                                            <option value="-" selected="">-</option>
-                                                            <option value="Call back later">Call back later</option>
-                                                            <option value="not interested">not interested</option>
-                                                       </select><br>
-                                                       <label for="phone">Notes</label>
-                                                       <textarea class="form-control" id="notes_call"
-                                                            placeholder="write Notes"></textarea>
-                                                       <label for="edit_first_name">First Name</label>
-                                                       <input type="text" class="form-control" id="edit_first_nameid"
-                                                            placeholder="First Name" />
-                                                       <label for="edit_last_name">Last Name</label>
-                                                       <input type="text" class="form-control" id="edit_last_nameid"
-                                                            placeholder="Last Name" />
-                                                       <label for="edit_phone">Phone</label>
-                                                       <input type="phone" class="form-control" id="edit_phoneid"
-                                                            placeholder="Phone" />
-                                                       <label for="edit_email">email</label>
-                                                       <input type="email" class="form-control" id="edit_emailid"
-                                                            placeholder="email" />
-                                                       <label for="edit_state">State</label>
-                                                       <input type="text" class="form-control" id="edit_stateid"
-                                                            placeholder="State" />
-                                                       <label for="edit_ask">Ask</label>
-                                                       <input type="text" class="form-control" id="edit_askid"
-                                                            placeholder="Ask" />
-                                                       <label for="edit_ask">Tax Overdue</label>
-                                                       <input type="text" class="form-control" id="edit_Tax_Overdueid"
-                                                            placeholder="Ask" />
-                                                       <label for="edit_ask">Contact Id</label>
-                                                       <input type="text" class="form-control" id="edit_Contact_Idid"
-                                                            placeholder="Ask" />
-                                                       <label for="edit_ask">Last call</label>
-                                                       <input type="text" class="form-control" id="edit_Last_callid"
-                                                            placeholder="Ask" />
-                                                       <label for="edit_ask">Last Dial Number</label>
-                                                       <input type="text" class="form-control"
-                                                            id="edit_Last_Dial_Numberid" placeholder="Ask" />
+                         </div>
+                    </div>
+               </div>
+               <div class="modal fade" id="smsModel" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                         <div class="modal-content">
+                              <div class="modal-header">
+                                   <h5 class="modal-title">SMS</h5>
+                                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                   </button>
+                              </div>
+                              <div class="modal-body">
+                                   <form id="send_sms">
+                                        <div class="form-group">
+                                             <select class="form-control" id="MsgNumber">
+                                                  <option value="" selected>Select Source Number</option>
+                                                  <option selected="selected" value="(425) 578-5798">(425) 578-5798
+                                                  </option>
+                                             </select>
+                                        </div>
+                                        <div class="form-group d-dflex">
+                                             <input type="tel" class="form-control" id="dest_num_sms"
+                                                  placeholder="Dest Number" required />
+                                        </div>
+                                        <div class="form-group">
+                                             <div class="input-group">
+                                                  <div class="chat-footer footer_inner">
+                                                       <input type="text" class="form-control" placeholder="Compose ..."
+                                                            id="message_body" />
+                                                       <div class="input-group-append button_main">
+                                                            <button id="sendtxt" class="btn btn-primary" type="submit"
+                                                                 onclick="send_message()">
+                                                                 <span class="fa fa-paper-plane"></span>
+                                                            </button>
+
+                                                       </div>
                                                   </div>
-                                                  <div class="modal-footer">
-                                                       <button type="button" id="send_smsid" onclick="sendText()"
-                                                            class="btn btn-primary float-right">
-                                                            send sms
-                                                       </button>
-                                                       <button type="button" id="save_notes"
-                                                            class="btn btn-primary float-right">
-                                                            save
-                                                       </button>
-                                                       <button type="button" id="next_call"
-                                                            class="btn btn-primary float-right">
-                                                            next
-                                                       </button>
-                                                       <button type="button" id="add_call"
-                                                            class="btn btn-primary float-right">
-                                                            Add other call
-                                                       </button>
+                                                  <div class="col-md-12 col-12 col-lg-12 col12 message-box"
+                                                       id="message-box">
                                                   </div>
+
                                              </div>
                                         </div>
-                                   </div>
+
+                                   </form>
+                                   </form>
+
                               </div>
                          </div>
                     </div>
                </div>
-          </div>
-          <div class="modal fade" id="smsModel" tabindex="-1" role="dialog" aria-hidden="true">
-               <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                         <div class="modal-header">
-                              <h5 class="modal-title">SMS</h5>
-                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                   <span aria-hidden="true">&times;</span>
-                              </button>
-                         </div>
-                         <div class="modal-body">
-                              <form id="send_sms">
-                                   <div class="form-group">
-                                        <select class="form-control" id="MsgNumber">
-                                             <option value="" selected>Select Source Number</option>
-                                             <option selected="selected" value="(425) 578-5798">(425) 578-5798</option>
-                                        </select>
-                                   </div>
-                                   <div class="form-group d-dflex">
-                                        <input type="tel" class="form-control" id="dest_num_sms"
-                                             placeholder="Dest Number" required />
-                                   </div>
-                                   <div class="form-group">
-                                        <div class="input-group">
-                                             <div class="chat-footer footer_inner">
-                                                  <input type="text" class="form-control" placeholder="Compose ..."
-                                                       id="message_body" />
-                                                  <div class="input-group-append button_main">
-                                                       <button id="sendtxt" class="btn btn-primary" type="submit"
-                                                            onclick="send_message()">
-                                                            <span class="fa fa-paper-plane"></span>
-                                                       </button>
-
-                                                  </div>
-                                             </div>
-                                             <div class="col-md-12 col-12 col-lg-12 col12 message-box" id="message-box">
-                                             </div>
-
-                                        </div>
-                                   </div>
-
-                              </form>
-                              </form>
-
-                         </div>
-                    </div>
-               </div>
-          </div>
 
 
-          </form>
+               </form>
 
-          <!-- DataTable - filter -->
-          <p id="table_filter" >
-               filter:
-               <select>
-                    <option value="">ALL</option>
-                    <option value="-">-</option>
-                    <option>Call back later</option>
-                    <option>not interested</option>
-               </select>
-          </p>
+               <!-- DataTable - filter -->
+               <p id="table_filter">
+                    filter:
+                    <select>
+                         <option value="">ALL</option>
+                         <option value="-">-</option>
+                         <option>Call back later</option>
+                         <option>not interested</option>
+                    </select>
+               </p>
 
-          <script>
-               var passwordResetToken = getParam("token");
-               var userToken = localStorage.getItem("user-token");
+               <script>
+                    var passwordResetToken = getParam("token");
+                    var userToken = localStorage.getItem("user-token");
 
-               console.log("MODE: PASSWORD_RESET, Token - " + passwordResetToken);
+                    console.log("MODE: PASSWORD_RESET, Token - " + passwordResetToken);
 
-               if (userToken == null) {
-                    window.location.replace("student_login.html");
-               }
-               function getParam(sParam) {
-                    var sPageURL = window.location.search.substring(1);
-                    var sURLVariables = sPageURL.split("&");
-                    for (var i = 0; i < sURLVariables.length; i++) {
-                         var sParameterName = sURLVariables[i].split("=");
-                         if (sParameterName[0] == sParam) {
-                              return sParameterName[1];
+                    if (userToken == null) {
+                         window.location.replace("student_login.html");
+                    }
+                    function getParam(sParam) {
+                         var sPageURL = window.location.search.substring(1);
+                         var sURLVariables = sPageURL.split("&");
+                         for (var i = 0; i < sURLVariables.length; i++) {
+                              var sParameterName = sURLVariables[i].split("=");
+                              if (sParameterName[0] == sParam) {
+                                   return sParameterName[1];
+                              }
                          }
                     }
-               }
 
-               $(document).ready(function () {
+                    $(document).ready(function () {
 
-                    // window.location.replace(`http://52.15.140.136:7778?token=${localStorage.getItem('user-token')}`);
+                         // window.location.replace(`http://52.15.140.136:7778?token=${localStorage.getItem('user-token')}`);
 
-                    $("#left_sidebar").load("sidebar.html");
-                    $("#page_header").load("header.html");
-               });
-               $(".body-row .collapse").collapse("hide");
+                         $("#left_sidebar").load("sidebar.html");
+                         $("#page_header").load("header.html");
+                    });
+                    $(".body-row .collapse").collapse("hide");
 
-               function left_sidebar() {
-                    SidebarCollapse();
-                    $('.logoimg').toggleClass("d-none");
-                    $('#cross').toggleClass("d-none");
-               }
-               function SidebarCollapse() {
-                    $(".menu-collapsed").toggleClass("d-none");
-                    $(".sidebar-submenu").toggleClass("d-none");
-                    $(".submenu-icon").toggleClass("d-none");
-                    $('#bar').toggleClass("d-block");
-                    $("#sidebar-container").toggleClass(
-                         "sidebar-expanded sidebar-collapsed"
-                    );
-                    // Treating d-flex/d-none on separators with title
-                    var SeparatorTitle = $(".sidebar-separator-title");
-                    if (SeparatorTitle.hasClass("d-flex")) {
-                         SeparatorTitle.removeClass("d-flex");
-                    } else {
-                         SeparatorTitle.addClass("d-flex");
+                    function left_sidebar() {
+                         SidebarCollapse();
+                         $('.logoimg').toggleClass("d-none");
+                         $('#cross').toggleClass("d-none");
                     }
-                    // Collapse/Expand icon
-                    //$('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
-               }
-               var user_list = [];
-               var selected_user_index;
-               var user_leads;
-               var call_data;
-               var table;
-               $(document).ready(function () {
-                    SERVER = "http://127.0.0.1:8040/"
-                    $.ajax({
-                         url: SERVER + "voip/api_voip/getlead",
-                         async: true,
-                         crossDomain: true,
-                         crossOrigin: true,
-                         type: 'GET',
-                         headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
-                    }).done((response) => {
-                         console.log(response, ' upload a csv file ----------------------');
-                         // document.getElementById("lead_loader").remove();
-                         lead_header = JSON.parse(response[0])
-                         console.log(lead_header,'leasheasder---');
+                    function SidebarCollapse() {
+                         $(".menu-collapsed").toggleClass("d-none");
+                         $(".sidebar-submenu").toggleClass("d-none");
+                         $(".submenu-icon").toggleClass("d-none");
+                         $('#bar').toggleClass("d-block");
+                         $("#sidebar-container").toggleClass(
+                              "sidebar-expanded sidebar-collapsed"
+                         );
+                         // Treating d-flex/d-none on separators with title
+                         var SeparatorTitle = $(".sidebar-separator-title");
+                         if (SeparatorTitle.hasClass("d-flex")) {
+                              SeparatorTitle.removeClass("d-flex");
+                         } else {
+                              SeparatorTitle.addClass("d-flex");
+                         }
+                         // Collapse/Expand icon
+                         //$('#collapse-icon').toggleClass('fa-angle-double-left fa-angle-double-right');
+                    }
+                    var user_list = [];
+                    var selected_user_index;
+                    var user_leads;
+                    var call_data;
+                    var table;
+                    $(document).ready(function () {
+                         SERVER = "http://127.0.0.1:8040/"
+                         $.ajax({
+                              url: SERVER + "voip/api_voip/getlead",
+                              async: true,
+                              crossDomain: true,
+                              crossOrigin: true,
+                              type: 'GET',
+                              headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
+                         }).done((response) => {
+                              // document.getElementById("lead_loader").remove();
+                              lead_header = JSON.parse(response[0])
+                              // console.log(user_leads, ' upload a csv file ----------------------');
+                              // console.log(lead_header, 'leasheasder---');
 
-                         var headerRowHtml = '<tr> <th>Action</th>';
-                         lead_header.forEach(function (header) {
-                              headerRowHtml += '<th>' + header + '</th>';
-                         });
-                         headerRowHtml += '</tr>';
-                         $("#lead_head").append(headerRowHtml);
-                         response[1] = (response[1]).replaceAll(NaN, '""')
-                         user_leads = JSON.parse(response[1])
-                         console.log(user_leads, 'upload a csv file -----5-----------------');
-                         user_leads.forEach((item, index) => {
-                              // console.log(item);
-                              var RowHtml = '<tr><td></td>';
-                              lead_header.forEach((header) => {
-                                   console.log(header,"-------header");
-                                   RowHtml += '<td id="phoneCall" onclick="selectNum(\'' + header + '\')">' + item[header] + '</td>';
+                              var headerRowHtml = '<tr> <th>Action</th>';
+                              lead_header.forEach(function (header) {
+                                   headerRowHtml += '<th>' + header + '</th>';
                               });
-                              RowHtml += '</tr>';
-                              console.log(RowHtml, "------------------------------w3sedtrfgyuh")
-                              $("#lead_data").append(RowHtml);
+                              headerRowHtml += '</tr>';
+                              $("#lead_head").append(headerRowHtml);
+                              response[1] = (response[1]).replaceAll(NaN, '""')
+                              user_leads = JSON.parse(response[1])
+                              console.log(user_leads);
+                              // console.log(user_leads[0].owner_phone, 'upload a csv file -----5-----------------');
+                              user_leads.forEach((item, index) => {
+                                   var RowHtml = '<tr><td onclick=check_box(${item.pk})></td>';
+                                   lead_header.forEach((header) => {
+                                        RowHtml += '<td id="phoneCall" onclick="selectNum(\'' + item.owner_phone + '\')">' + item[header] + '</td>';
+                                   });
+                                   RowHtml += '</tr>';
+                                   $("#lead_data").append(RowHtml);
                               });
+
 
                               // $("#lead_data").append(`
                               //      <tr>
@@ -724,524 +736,521 @@
                               //      <td id="phoneCall" onclick="selectNum('${index}')">${item.Member_Last_Name}</td>
                               //      <td id="phoneCall" onclick="selectNum('${index}')">${item.Total_Calls}</td>
                               //      </tr>`);
-                         // })
-                         // DataTable and modification
-                         table = $("#lead_table_main").DataTable({
-                              dom: 'lr<"table-filter-container">tip',
-                              initComplete: function (settings) {
-                                   var api = new $.fn.dataTable.Api(settings);
-                                   $('.table-filter-container', api.table().container()).append(
-                                        $('#table_filter').detach().show()
-                                   );
-                                   $('#table_filter select').on('change', function () {
-                                        table.search(this.value).draw();
-                                   });
-                              },
-                              columnDefs: [{
-                                   orderable: false,
-                                   className: 'select-checkbox',
-                                   targets: 0,
-                                   checkboxes: {
-                                        'selectRow': true
-                                   }
-                              }],
-                              select: {
-                                   'style': 'multi',
-                                   'selector': 'td:first-child'
-                              },
-                              order: [[1, 'asc']]
-                         });
-
-                         var select = table.column(0).checkboxes;
-                    }).fail((err) => {
-                         console.log("🚀 ~ file: leads.html ~ line 522 ~ err", err)
-                         console.log("error-----ss...", err)
-                    })
-               });
-
-
-
-               // open csvUploder model
-               $('#importCsv').click(() => {
-                    $('#csvModel').modal()
-               })
-
-               // submit csvFile
-               $("#uplodCsv").click(function () {
-                    var form = new FormData();
-                    SERVER = "http://127.0.0.1:8040/"
-                    form.append("csvFile", document.getElementById("csvFile").files[0])
-                    var settings = {
-                         "async": true,
-                         "crossDomain": true,
-                         "url": SERVER + "voip/api_voip/csvUploder",
-                         "type": "POST",
-                         "processData": false,
-                         "contentType": false,
-                         "mimeType": "multipart/form-data",
-                         "data": form,
-                         "headers": {
-                              "Authorization": "Bearer " + localStorage.getItem('user-token')
-                         },
-                    };
-                    $.ajax(settings).done(function (response) {
-                         swal({
-                              title: "Good job!",
-                              icon: "success",
-                              button: "Aww yess!",
-                              text: JSON.parse(response).message,
-                              timer: 3000,
-                         });
-                         // setTimeout(function () { location.reload() }, 3000);
-                    }).fail(function (err) {
-                         swal({
-                              title: "Error!",
-                              text: JSON.parse(err.responseText).message,
-                              icon: "warning",
-                              button: "do it again",
-                              timer: 4000,
-                         });
-                    });
-               })
-
-               // edit lead model open
-               function editLead(index) {
-                    $("#userLeadData").hide();
-                    $('#editLeadModel').show();
-                    $('#submitLead').val(user_leads[index].pk)
-                    $('#deleteLead').val(user_leads[index].pk)
-                    $('#edit_first_name').val(user_leads[index].fields.first_name)
-                    $('#edit_last_name').val(user_leads[index].fields.last_name)
-                    $('#edit_phone').val(user_leads[index].fields.phone)
-                    $('#edit_email').val(user_leads[index].fields.email)
-                    $('#edit_state').val(user_leads[index].fields.state)
-                    $('#edit_ask').val(user_leads[index].fields.ask)
-                    $('#edit_notes').val(user_leads[index].fields.notes)
-                    $('#edit_url').val(user_leads[index].fields.url)
-                    $('#edit_status').val(user_leads[index].fields.status)
-               }
-
-               // go back from editPage 
-               function goBackEdit() {
-                    $("#userLeadData").show();
-                    $("#editLeadModel").hide();
-               }
-
-               // delete lead from editPage
-               $('#deleteLead').click(() => {
-                    SERVER = "http://127.0.0.1:8040/"
-                    pk = $('#deleteLead').val()
-                    $.ajax({
-                         url: SERVER + "voip/api_voip/getlead/",
-                         async: true,
-                         crossDomain: true,
-                         crossOrigin: true,
-                         type: "DELETE",
-                         data: {
-                              'pk': pk,
-                         },
-                         headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
-                    }).done(() => {
-                         swal({
-                              title: " lead Deleted",
-                              text: "You have successfully delete lead",
-                              icon: "success",
-                              timer: 2000
-                         })
-                         location.reload()
-                    }).fail((err) => {
-                         console.log(err)
-                    })
-               })
-
-               // submit edited lead
-               $("#submitLead").click(() => {
-                    SERVER = "http://127.0.0.1:8040/"
-                    pk = $('#submitLead').val()
-                    first_name = $('#edit_first_name').val()
-                    last_name = $('#edit_last_name').val()
-                    phone = $('#edit_phone').val()
-                    email = $('#edit_email').val()
-                    state = $('#edit_state').val()
-                    ask = $('#edit_ask').val()
-                    notes = $('#edit_notes').val()
-                    url = $('#edit_url').val()
-                    status = $('#edit_status').val()
-                    $.ajax({
-                         url: SERVER + "voip/api_voip/getlead",
-                         async: true,
-                         crossDomain: true,
-                         crossOrigin: true,
-                         type: "PUT",
-                         data: {
-                              'pk': pk,
-                              'first_name': first_name,
-                              'last_name': last_name,
-                              'phone': phone,
-                              'email': email,
-                              'state': state,
-                              'ask': ask,
-                              'notes': notes,
-                              'url': url,
-                              'status': status,
-                         },
-                         headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
-                    }).done(() => {
-                         swal({
-                              title: "edit saved",
-                              text: "You have successfully edited lead",
-                              icon: "success",
-                              timer: 2000
-                         })
-                         location.reload()
-                    }).fail((err) => {
-                         console.log(err)
-                    })
-               })
-
-               // checkbox - check & uncheck
-               var list_delete = []
-               function check_box(id) {
-                    console.log('is-ckeck');
-                    if (list_delete.indexOf(id) === -1) {
-                         list_delete.push(id)
-                    }
-                    else {
-                         const index = list_delete.indexOf(id);
-                         if (index > -1) {
-                              list_delete.splice(index, 1);
-                         }
-                    }
-               }
-
-               //  select and delete multipleLead
-               $('#deleteMultiple').click(() => {
-                    SERVER = "http://127.0.0.1:8040/"
-                    if (list_delete.length !== 0) {
-                         swal({
-                              title: "Are you sure?",
-                              text: "Once deleted, you will not be able to recover this leads Again!",
-                              icon: "warning",
-                              buttons: true,
-                              dangerMode: true,
-                         })
-                              .then((willDelete) => {
-                                   console.log(willDelete, 'willdelete------');
-                                   if (willDelete) {
-                                        $.ajax({
-                                             url: SERVER + "voip/api_voip/getlead" + "?listPk=" + list_delete,
-                                             async: true,
-                                             crossDomain: true,
-                                             crossOrigin: true,
-                                             type: "DELETE",
-                                             headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
-                                        }).done(() => {
-                                             swal({
-                                                  title: "multiple leads Deleted",
-                                                  text: "You have successfully delete leads",
-                                                  icon: "success",
-                                                  timer: 2000
-                                             })
-                                             location.reload()
-                                        }).fail((err) => {
-                                             console.log(err)
-                                        })
-                                   } else {
-                                        swal("Your selected leads are safe!");
-                                   }
+                              // })
+                              // DataTable and modification
+                              table = $("#lead_table_main").DataTable({
+                                   dom: 'lr<"table-filter-container">tip',
+                                   initComplete: function (settings) {
+                                        var api = new $.fn.dataTable.Api(settings);
+                                        $('.table-filter-container', api.table().container()).append(
+                                             $('#table_filter').detach().show()
+                                        );
+                                        $('#table_filter select').on('change', function () {
+                                             table.search(this.value).draw();
+                                        });
+                                   },
+                                   columnDefs: [{
+                                        orderable: false,
+                                        className: 'select-checkbox',
+                                        targets: 0,
+                                        checkboxes: {
+                                             'selectRow': true
+                                        }
+                                   }],
+                                   select: {
+                                        'style': 'multi',
+                                        'selector': 'td:first-child'
+                                   },
+                                   order: [[1, 'asc']]
                               });
-                    }
-                    else {
-                         swal({
-                              text: "select lead to delete",
-                              icon: 'warning',
-                              title: 'Oops...',
+
+                              var select = table.column(0).checkboxes;
+                         }).fail((err) => {
+                              console.log("🚀 ~ file: leads.html ~ line 522 ~ err", err)
+                              console.log("error-----ss...", err)
                          })
-                    }
-               })
-
-               // open new lead page.
-               $("#add_lead").click(() => {
-                    $("#userLeadData").hide();
-                    $("#addLead").show();
-               })
-
-               // go back from newLead
-               function goBack() {
-                    $("#userLeadData").show();
-                    $("#addLead").hide();
-               }
-
-               // submit new lead
-               const phoneInputField = document.querySelector("#phone");
-               const phoneInput = window.intlTelInput(phoneInputField, {
-                    utilsScript:
-                         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-               });
-
-               $('#save_new_lead').click(() => {
-                    first_name = $('#first_name').val()
-                    last_name = $('#last_name').val()
-                    phone = phoneInput.getNumber()
-                    email = $('#email').val()
-                    state = $('#state').val()
-                    ask = $('#ask').val()
-                    notes = $('#new_notes').val()
-                    new_url = $('#new_url').val()
-                    $.ajax({
-                         url: SERVER + "voip/api_voip/getlead",
-                         async: true,
-                         crossOrigin: true,
-                         crossDomain: true,
-                         type: 'POST',
-                         data: {
-                              'first_name': first_name,
-                              'last_name': last_name,
-                              'phone': phone,
-                              'email': email,
-                              'state': state,
-                              'ask': ask,
-                              'notes': notes,
-                              'new_url': new_url,
-                         },
-                         headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
-                    }).done(() => {
-                         swal({
-                              title: "leads saved",
-                              text: "You have successfully saved leads",
-                              icon: "success",
-                              timer: 2000
-                         })
-                         location.reload()
-                    }).fail((err) => {
-                         console.log(err);
-                    })
-               })
-
-               // open 1'st overlay
-               var next_index = "";
-               function selectNum(index) {
-                    $("#selectNumberModel").modal();
-                    $("#makeCall").val(index)
-                    $("#dest_num_call").val(user_leads[index].fields.phone)
-                    next_index = index;
-               }
-               function textNum(index) {
-                    $("#smsModel").modal();
-                    $("#dest_num_sms").val(user_leads[index].fields.phone)
-                    var html = "";
-                    num = user_leads[index].fields.phone
-                    get_sms_to_number(num, function (res) {
-
-                         console.log(user_leads[index].fields.phone)
-                         console.log(res)
-
-                         //$("#message-box").empty();
-
-                         var filtered_data = res.messages.filter((item) => (item.to == num || item.from == num)
-                         );
-
-                         console.log(filtered_data)
-
-                         filtered_data.sort(function (a, b) {
-                              // Turn your strings into dates, and then subtract them
-                              // to get a value that is either negative, positive, or zero.
-                              if (a.date_created < b.date_created)
-                                   return -1;
-                              if (a.date_created > b.date_created)
-                                   return 1;
-                              return 0;
-                         });
-                         console.log(filtered_data)
-
-                         for (var msg of filtered_data) {
-
-                              if (msg.to == num) {
-                                   html += `<div class="message sent col-md-9 col-11">
-                                             <p class="col-md-12 col-12">${msg.body}</p>
-                                             <span>${msg.date_created}</span>
-                                             </div>`;
-                              } else {
-                                   html += `<div class="message received col-md-9 col-11">
-                                             <p class="col-md-12 col-12">${msg.body}</p>
-                                             <span>${msg.date_created}</span>
-                                             </div>`;
-                              }
-                         }
-                         console.log(html)
-                         $("#message-box").empty();
-                         $("#message-box").append(html);
                     });
-               }
-               // makeCall and open overlay 2
-               var source_num;
-               var dest_num;
-               var index;
-               var your_num;
-               const yourNumberInputField = document.querySelector("#yourNumber");
-               const yourNumberInput = window.intlTelInput(yourNumberInputField, {
-                    utilsScript:
-                         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-               });
 
-               var count = 0
-               $("#addNum").click(() => {
-                    if (count < 2) {
-                         add = ''
-                         $("#addField").append(`<input type="tel" class="form-control" id="yourNumber('${count}')" placeholder="Your Number for join_conference"  required/>`);
-                         count = count + 1;
+
+
+                    // open csvUploder model
+                    $('#importCsv').click(() => {
+                         $('#csvModel').modal()
+                    })
+
+                    // submit csvFile
+                    $("#uplodCsv").click(function () {
+                         var form = new FormData();
+                         SERVER = "http://127.0.0.1:8040/"
+                         form.append("csvFile", document.getElementById("csvFile").files[0])
+                         var settings = {
+                              "async": true,
+                              "crossDomain": true,
+                              "url": SERVER + "voip/api_voip/csvUploder",
+                              "type": "POST",
+                              "processData": false,
+                              "contentType": false,
+                              "mimeType": "multipart/form-data",
+                              "data": form,
+                              "headers": {
+                                   "Authorization": "Bearer " + localStorage.getItem('user-token')
+                              },
+                         };
+                         $.ajax(settings).done(function (response) {
+                              swal({
+                                   title: "Good job!",
+                                   icon: "success",
+                                   button: "Aww yess!",
+                                   text: JSON.parse(response).message,
+                                   timer: 3000,
+                              });
+                              // setTimeout(function () { location.reload() }, 3000);
+                         }).fail(function (err) {
+                              swal({
+                                   title: "Error!",
+                                   text: JSON.parse(err.responseText).message,
+                                   icon: "warning",
+                                   button: "do it again",
+                                   timer: 4000,
+                              });
+                         });
+                    })
+
+                    // edit lead model open
+                    function editLead(index) {
+                         $("#userLeadData").hide();
+                         $('#editLeadModel').show();
+                         $('#submitLead').val(user_leads[index].pk)
+                         $('#deleteLead').val(user_leads[index].pk)
+                         $('#edit_first_name').val(user_leads[index].fields.first_name)
+                         $('#edit_last_name').val(user_leads[index].fields.last_name)
+                         $('#edit_phone').val(user_leads[index].fields.phone)
+                         $('#edit_email').val(user_leads[index].fields.email)
+                         $('#edit_state').val(user_leads[index].fields.state)
+                         $('#edit_ask').val(user_leads[index].fields.ask)
+                         $('#edit_notes').val(user_leads[index].fields.notes)
+                         $('#edit_url').val(user_leads[index].fields.url)
+                         $('#edit_status').val(user_leads[index].fields.status)
                     }
-               })
 
-               $("#add_call").click(() => {
-                    $("#notesModal").hide()
-                    $("#selectNumberModel").show();
+                    // go back from editPage 
+                    function goBackEdit() {
+                         $("#userLeadData").show();
+                         $("#editLeadModel").hide();
+                    }
 
-               })
-
-               $("#makeCall").click(() => {
-                    index = $("#makeCall").val()
-                    source_num = $('#sourceCallNumber option:selected').val()
-                    dest_num = $("#dest_num_call").val()
-                    your_num = yourNumberInput.getNumber()
-
-                    if (source_num === 'Select Source Number') {
-                         swal({
-                              title: "Select source number",
-                              text: "You have to select source number",
-                              icon: "warning",
-                              timer: 2000
-                         })
-                    } else if (your_num === '') {
-                         swal({
-                              title: "Enter designation number",
-                              text: "You have to enter  number",
-                              icon: "warning",
-                              timer: 2000
-                         })
-                    } else {
-
-                         $("#save_notes").val(user_leads[index].pk)
-                         $("#selectNumberModel").toggle();
-                         $("#notesModal").modal();
-                         $("#notesModal").show();
-                         $("#Zillow_url").empty();
-                         $("#Zillow_url").append(`name : ${user_leads[index].fields.first_name}  ${user_leads[index].fields.last_name}  <br> Zillow url : <a href="${user_leads[index].fields.url}">${user_leads[index].fields.url}</a> <br><br>`);
-                         $('#notes_call').val(user_leads[index].fields.notes);
-                         $('#edit_first_nameid').val(user_leads[index].fields.first_name);
-                         $('#edit_last_nameid').val(user_leads[index].fields.last_name);
-                         $('#edit_phoneid').val(user_leads[index].fields.phone);
-                         $('#edit_emailid').val(user_leads[index].fields.email);
-                         $('#edit_stateid').val(user_leads[index].fields.state);
-                         $('#edit_askid').val(user_leads[index].fields.ask);
-                         $('#edit_Tax_Overdueid').val(user_leads[index].fields.tax_overdue);
-                         $('#edit_Contact_Idid').val(user_leads[index].fields.contact_id);
-                         $('#edit_Last_callid').val(user_leads[index].fields.last_call);
-                         $('#edit_Last_Dial_Numberid').val(user_leads[index].fields.last_dial_number);
-
+                    // delete lead from editPage
+                    $('#deleteLead').click(() => {
+                         SERVER = "http://127.0.0.1:8040/"
+                         pk = $('#deleteLead').val()
                          $.ajax({
-                              url: SERVER + "voip/api_voip/join_conference",
+                              url: SERVER + "voip/api_voip/getlead/",
                               async: true,
                               crossDomain: true,
                               crossOrigin: true,
-                              type: 'POST',
+                              type: "DELETE",
                               data: {
-                                   "source_number": source_num,
-                                   "dest_number": dest_num,
-                                   "your_number": your_num,
-                                   "id": user_leads[index].pk
-
+                                   'pk': pk,
                               },
-                              headers: { "Authorization": `${localStorage.getItem('user-token')}` }
+                              headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
+                         }).done(() => {
+                              swal({
+                                   title: " lead Deleted",
+                                   text: "You have successfully delete lead",
+                                   icon: "success",
+                                   timer: 2000
+                              })
+                              location.reload()
+                         }).fail((err) => {
+                              console.log(err)
                          })
-                    }
-                    $("#selectNumberModel").show();
-               })
-               function nextNum(next_index) {
-                    $("#selectNumberModel").modal();
-                    $("#makeCall").val(next_index)
-                    $("#dest_num_call").val(user_leads[next_index].fields.phone)
-               }
-               var phonenum;
-               function sendText(index) {
+                    })
 
-                    phonenum = user_leads[index] ? user_leads[index].fields.phone : undefined
-                    console.log(phonenum)
-                    $("#dest_num_sms").val(phonenum)
-                    var html = "";
-                    get_sms_to_number(phonenum, function (res) {
+                    // submit edited lead
+                    $("#submitLead").click(() => {
+                         SERVER = "http://127.0.0.1:8040/"
+                         pk = $('#submitLead').val()
+                         first_name = $('#edit_first_name').val()
+                         last_name = $('#edit_last_name').val()
+                         phone = $('#edit_phone').val()
+                         email = $('#edit_email').val()
+                         state = $('#edit_state').val()
+                         ask = $('#edit_ask').val()
+                         notes = $('#edit_notes').val()
+                         url = $('#edit_url').val()
+                         status = $('#edit_status').val()
+                         $.ajax({
+                              url: SERVER + "voip/api_voip/getlead",
+                              async: true,
+                              crossDomain: true,
+                              crossOrigin: true,
+                              type: "PUT",
+                              data: {
+                                   'pk': pk,
+                                   'first_name': first_name,
+                                   'last_name': last_name,
+                                   'phone': phone,
+                                   'email': email,
+                                   'state': state,
+                                   'ask': ask,
+                                   'notes': notes,
+                                   'url': url,
+                                   'status': status,
+                              },
+                              headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
+                         }).done(() => {
+                              swal({
+                                   title: "edit saved",
+                                   text: "You have successfully edited lead",
+                                   icon: "success",
+                                   timer: 2000
+                              })
+                              location.reload()
+                         }).fail((err) => {
+                              console.log(err)
+                         })
+                    })
 
-                         console.log(phonenum)
-                         console.log(res)
-
-                         //$("#message-box").empty();
-                         if (phonenum !== undefined) {
-                              var filtered_data = res.messages.filter((item) => (item.to == phonenum || item.from == phonenum)
-                              );
+                    // checkbox - check & uncheck
+                    var list_delete = []
+                    function check_box(id) {
+                         console.log('is-ckeck');
+                         if (list_delete.indexOf(id) === -1) {
+                              list_delete.push(id)
                          }
-
-                         console.log(filtered_data)
-
-                         filtered_data && filtered_data.sort(function (a, b) {
-                              // Turn your strings into dates, and then subtract them
-                              // to get a value that is either negative, positive, or zero.
-                              if (a.date_created < b.date_created)
-                                   return -1;
-                              if (a.date_created > b.date_created)
-                                   return 1;
-                              return 0;
-                         });
-                         console.log(filtered_data)
-
-                         for (var msg of filtered_data) {
-
-                              if (msg.to == phonenum) {
-                                   html += `<div class="message sent col-md-9 col-11">
-                                             <p class="col-md-12 col-12">${msg.body}</p>
-                                             <span>${msg.date_created}</span>
-                                             </div>`;
-                              } else {
-                                   html += `<div class="message received col-md-9 col-11">
-                                             <p class="col-md-12 col-12">${msg.body}</p>
-                                             <span>${msg.date_created}</span>
-                                             </div>`;
+                         else {
+                              const index = list_delete.indexOf(id);
+                              if (index > -1) {
+                                   list_delete.splice(index, 1);
                               }
                          }
-                         console.log(html)
-                         $("#message-box").empty();
-                         $("#message-box").append(html);
+                    }
+
+                    //  select and delete multipleLead
+                    $('#deleteMultiple').click(() => {
+                         SERVER = "http://127.0.0.1:8040/"
+                         if (list_delete.length !== 0) {
+                              swal({
+                                   title: "Are you sure?",
+                                   text: "Once deleted, you will not be able to recover this leads Again!",
+                                   icon: "warning",
+                                   buttons: true,
+                                   dangerMode: true,
+                              })
+                                   .then((willDelete) => {
+                                        console.log(willDelete, 'willdelete------');
+                                        if (willDelete) {
+                                             $.ajax({
+                                                  url: SERVER + "voip/api_voip/getlead" + "?listPk=" + list_delete,
+                                                  async: true,
+                                                  crossDomain: true,
+                                                  crossOrigin: true,
+                                                  type: "DELETE",
+                                                  headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
+                                             }).done(() => {
+                                                  swal({
+                                                       title: "multiple leads Deleted",
+                                                       text: "You have successfully delete leads",
+                                                       icon: "success",
+                                                       timer: 2000
+                                                  })
+                                                  location.reload()
+                                             }).fail((err) => {
+                                                  console.log(err)
+                                             })
+                                        } else {
+                                             swal("Your selected leads are safe!");
+                                        }
+                                   });
+                         }
+                         else {
+                              swal({
+                                   text: "select lead to delete",
+                                   icon: 'warning',
+                                   title: 'Oops...',
+                              })
+                         }
+                    })
+
+                    // open new lead page.
+                    $("#add_lead").click(() => {
+                         $("#userLeadData").hide();
+                         $("#addLead").show();
+                    })
+
+                    // go back from newLead
+                    function goBack() {
+                         $("#userLeadData").show();
+                         $("#addLead").hide();
+                    }
+
+                    // submit new lead
+                    const phoneInputField = document.querySelector("#phone");
+                    const phoneInput = window.intlTelInput(phoneInputField, {
+                         utilsScript:
+                              "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
                     });
-               }
-               $("#send_smsid").click(() => {
-                    $("#selectNumberModel").toggle();
-                    $('#selectNumberModel').modal('hide');
 
-                    $('#smsModel').modal();
+                    $('#save_new_lead').click(() => {
+                         first_name = $('#first_name').val()
+                         last_name = $('#last_name').val()
+                         phone = phoneInput.getNumber()
+                         email = $('#email').val()
+                         state = $('#state').val()
+                         ask = $('#ask').val()
+                         notes = $('#new_notes').val()
+                         new_url = $('#new_url').val()
+                         $.ajax({
+                              url: SERVER + "voip/api_voip/getlead",
+                              async: true,
+                              crossOrigin: true,
+                              crossDomain: true,
+                              type: 'POST',
+                              data: {
+                                   'first_name': first_name,
+                                   'last_name': last_name,
+                                   'phone': phone,
+                                   'email': email,
+                                   'state': state,
+                                   'ask': ask,
+                                   'notes': notes,
+                                   'new_url': new_url,
+                              },
+                              headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
+                         }).done(() => {
+                              swal({
+                                   title: "leads saved",
+                                   text: "You have successfully saved leads",
+                                   icon: "success",
+                                   timer: 2000
+                              })
+                              location.reload()
+                         }).fail((err) => {
+                              console.log(err);
+                         })
+                    })
 
-                    sendText(index);
-               })
+                    // open 1'st overlay
+                    var next_index = "";
+                    function selectNum(ownerPhone) {
+                         $("#selectNumberModel").modal();
+                         $("#makeCall").val(index)
+                         $("#dest_num_call").val(ownerPhone)
+                         next_index = index;
+                    }
+                    function textNum(index) {
+                         $("#smsModel").modal();
+                         $("#dest_num_sms").val(user_leads[index].fields.phone)
+                         var html = "";
+                         num = user_leads[index].fields.phone
+                         get_sms_to_number(num, function (res) {
 
-               $("#next_call").click(() => {
-                    $("#notesModal").toggle();
-                    $('#notesModal').modal('hide');
-                    next_index = ++next_index;
-                    nextNum(next_index);
-               })
+                              console.log(user_leads[index].fields.phone)
+                              console.log(res)
 
-               // play pause music on conference call.
-               var audio_files = {
-                    'koyal_bird': "https://audio-previews.elements.envatousercontent.com/files/237106115/preview.mp3",
-                    'insects_voice': "https://assets.mixkit.co/sfx/preview/mixkit-small-birds-in-the-nest-29.mp3",
-                    'one_bird': "https://orangefreesounds.com/wp-content/uploads/2021/04/Bird-tweeting-sound-effect.mp3",
-                    'picock_bird': "http://seh-audio.s3.amazonaws.com/peacock_sounds_long.wav",
-                    'koyal_bird': "https://nf1f8200-a.akamaihd.net/downloads/ringtones/files/mp3/beautiful-koyal-real-sound-mp3-good-morning-songsindia-net-9993.mp3",
-                    'insects_voice_2': "https://assets.mixkit.co/sfx/preview/mixkit-little-birds-singing-in-the-trees-17.mp3"
-               }
 
-               for (let file in audio_files) {
-                    console.log(file + ' is ' + audio_files[file])
-                    $("#music_files").append(
-                         `<div>
+                              var filtered_data = res.messages.filter((item) => (item.to == num || item.from == num)
+                              );
+
+                              console.log(filtered_data)
+
+                              filtered_data.sort(function (a, b) {
+                                   // Turn your strings into dates, and then subtract them
+                                   // to get a value that is either negative, positive, or zero.
+                                   if (a.date_created < b.date_created)
+                                        return -1;
+                                   if (a.date_created > b.date_created)
+                                        return 1;
+                                   return 0;
+                              });
+                              console.log(filtered_data)
+
+                              for (var msg of filtered_data) {
+
+                                   if (msg.to == num) {
+                                        html += `<div class="message sent col-md-9 col-11">
+                                             <p class="col-md-12 col-12">${msg.body}</p>
+                                             <span>${msg.date_created}</span>
+                                             </div>`;
+                                   } else {
+                                        html += `<div class="message received col-md-9 col-11">
+                                             <p class="col-md-12 col-12">${msg.body}</p>
+                                             <span>${msg.date_created}</span>
+                                             </div>`;
+                                   }
+                              }
+                              console.log(html)
+                              $("#message-box").empty();
+                              $("#message-box").append(html);
+                         });
+                    }
+                    // makeCall and open overlay 2
+                    var source_num;
+                    var dest_num;
+                    var index;
+                    var your_num;
+                    const yourNumberInputField = document.querySelector("#yourNumber");
+                    const yourNumberInput = window.intlTelInput(yourNumberInputField, {
+                         utilsScript:
+                              "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                    });
+
+                    var count = 0
+                    $("#addNum").click(() => {
+                         if (count < 2) {
+                              add = ''
+                              $("#addField").append(`<input type="tel" class="form-control" id="yourNumber('${count}')" placeholder="Your Number for join_conference"  required/>`);
+                              count = count + 1;
+                         }
+                    })
+
+                    $("#add_call").click(() => {
+                         $("#notesModal").hide()
+                         $("#selectNumberModel").show();
+                    })
+                    
+                    $("#makeCall").click(() => {
+                         index = $("#makeCall").val()
+                         source_num = $('#sourceCallNumber option:selected').val()
+                         dest_num = $("#dest_num_call").val()
+                         your_num = yourNumberInput.getNumber()
+
+                         if (source_num === 'Select Source Number') {
+                              swal({
+                                   title: "Select source number",
+                                   text: "You have to select source number",
+                                   icon: "warning",
+                                   timer: 2000
+                              })
+                         } else if (your_num === '') {
+                              swal({
+                                   title: "Enter designation number",
+                                   text: "You have to enter  number",
+                                   icon: "warning",
+                                   timer: 2000
+                              })
+                         } else {
+                              $("#save_notes").val(user_leads[index])
+                              $("#selectNumberModel").toggle();
+                              $("#notesModal").modal();
+                              $("#notesModal").show();
+                              $("#Zillow_url").empty();
+                              $("#Zillow_url").append(`name : ${user_leads[index].fields.first_name}  ${user_leads[index].fields.last_name}  <br> Zillow url : <a href="${user_leads[index].fields.url}">${user_leads[index].fields.url}</a> <br><br>`);
+                              $('#notes_call').val(user_leads[index].fields.notes);
+                              $('#edit_first_nameid').val(user_leads[index].fields.first_name);
+                              $('#edit_last_nameid').val(user_leads[index].fields.last_name);
+                              $('#edit_phoneid').val(user_leads[index].fields.phone);
+                              $('#edit_emailid').val(user_leads[index].fields.email);
+                              $('#edit_stateid').val(user_leads[index].fields.state);
+                              $('#edit_askid').val(user_leads[index].fields.ask);
+                              $('#edit_Tax_Overdueid').val(user_leads[index].fields.tax_overdue);
+                              $('#edit_Contact_Idid').val(user_leads[index].fields.contact_id);
+                              $('#edit_Last_callid').val(user_leads[index].fields.last_call);
+                              $('#edit_Last_Dial_Numberid').val(user_leads[index].fields.last_dial_number);
+
+                              $.ajax({
+                                   url: SERVER + "voip/api_voip/join_conference",
+                                   async: true,
+                                   crossDomain: true,
+                                   crossOrigin: true,
+                                   type: 'POST',
+                                   data: {
+                                        "source_number": source_num,
+                                        "dest_number": dest_num,
+                                        "your_number": your_num,
+                                        "id": user_leads[index].pk
+
+                                   },
+                                   headers: { "Authorization": `${localStorage.getItem('user-token')}` }
+                              })
+                         }
+                         $("#selectNumberModel").show();
+                    })
+                    function nextNum(next_index) {
+                         $("#selectNumberModel").modal();
+                         $("#makeCall").val(next_index)
+                         // $("#dest_num_call").val(user_leads[next_index].fields.phone)
+                    }
+                    var phonenum;
+                    function sendText(index) {
+
+                         phonenum = user_leads[index] ? user_leads[index].fields.phone : undefined
+                         console.log(phonenum)
+                         $("#dest_num_sms").val(phonenum)
+                         var html = "";
+                         get_sms_to_number(phonenum, function (res) {
+
+                              console.log(phonenum)
+                              console.log(res)
+
+                              //$("#message-box").empty();
+                              if (phonenum !== undefined) {
+                                   var filtered_data = res.messages.filter((item) => (item.to == phonenum || item.from == phonenum)
+                                   );
+                              }
+
+                              console.log(filtered_data)
+
+                              filtered_data && filtered_data.sort(function (a, b) {
+                                   // Turn your strings into dates, and then subtract them
+                                   // to get a value that is either negative, positive, or zero.
+                                   if (a.date_created < b.date_created)
+                                        return -1;
+                                   if (a.date_created > b.date_created)
+                                        return 1;
+                                   return 0;
+                              });
+                              console.log(filtered_data)
+
+                              for (var msg of filtered_data) {
+
+                                   if (msg.to == phonenum) {
+                                        html += `<div class="message sent col-md-9 col-11">
+                                             <p class="col-md-12 col-12">${msg.body}</p>
+                                             <span>${msg.date_created}</span>
+                                             </div>`;
+                                   } else {
+                                        html += `<div class="message received col-md-9 col-11">
+                                             <p class="col-md-12 col-12">${msg.body}</p>
+                                             <span>${msg.date_created}</span>
+                                             </div>`;
+                                   }
+                              }
+                              console.log(html)
+                              $("#message-box").empty();
+                              $("#message-box").append(html);
+                         });
+                    }
+                    $("#send_smsid").click(() => {
+                         $("#selectNumberModel").toggle();
+                         $('#selectNumberModel').modal('hide');
+
+                         $('#smsModel').modal();
+
+                         sendText(index);
+                    })
+
+                    $("#next_call").click(() => {
+                         $("#notesModal").toggle();
+                         $('#notesModal').modal('hide');
+                         next_index = ++next_index;
+                         nextNum(next_index);
+                    })
+
+                    // play pause music on conference call.
+                    var audio_files = {
+                         'koyal_bird': "https://audio-previews.elements.envatousercontent.com/files/237106115/preview.mp3",
+                         'insects_voice': "https://assets.mixkit.co/sfx/preview/mixkit-small-birds-in-the-nest-29.mp3",
+                         'one_bird': "https://orangefreesounds.com/wp-content/uploads/2021/04/Bird-tweeting-sound-effect.mp3",
+                         'picock_bird': "http://seh-audio.s3.amazonaws.com/peacock_sounds_long.wav",
+                         'koyal_bird': "https://nf1f8200-a.akamaihd.net/downloads/ringtones/files/mp3/beautiful-koyal-real-sound-mp3-good-morning-songsindia-net-9993.mp3",
+                         'insects_voice_2': "https://assets.mixkit.co/sfx/preview/mixkit-little-birds-singing-in-the-trees-17.mp3"
+                    }
+
+                    for (let file in audio_files) {
+                         console.log(file + ' is ' + audio_files[file])
+                         $("#music_files").append(
+                              `<div>
                               <audio id='${file}'>
                               <source src=${audio_files[file]} type="audio/mpeg">
                                    Your browser does not support the audio element.
@@ -1250,146 +1259,146 @@
                               <button class="btn btn-primary" onclick="pauseAudio('${file}')" type="button"><i class="fa fa-pause" aria-hidden="true"></i></button> 
                               ${file}                                                  
                          </div>`
-                    )
-               }
-               // function to play audio
-               function playAudio(key) {
-                    console.log(key)
-                    var x = document.getElementById(key);
-                    x.play();
-               }
-               // function to pause audio
-               function pauseAudio(key) {
-                    console.log(key)
-                    var x = document.getElementById(key);
-                    x.pause();
-               }
-
-               // save notes and status to db
-               $("#save_notes").click(() => {
-                    status = $('#status_val').val();
-                    notes = $('#notes_call').val();
-                    $.ajax({
-                         url: SERVER + "voip/api_voip/getlead",
-                         async: true,
-                         crossDomain: true,
-                         crossOrigin: true,
-                         type: "PUT",
-                         data: {
-                              "pk": user_leads[index].pk,
-                              "notes": notes,
-                              "status": status,
-                              "last_dial_number": your_num
-                         },
-                         headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
-                    }).done(() => {
-                         console.log("done")
-                         swal({
-                              title: "notes saved",
-                              text: "You have successfully saved notes",
-                              icon: "success",
-                              timer: 2000
-                         })
-                         location.reload()
-                    }).fail((err) => {
-                         console.log(err)
-                    })
-               })
-
-               $(document).ready(function () {
-                    $('[data-toggle="tooltip"]').tooltip();
-               });
-               const destNumSmsInputField = document.querySelector("#dest_num_sms");
-               const destNumSmsInput = window.intlTelInput(destNumSmsInputField, {
-                    utilsScript:
-                         "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
-               });
-
-               // For send messages and show chats
-               var des_num_sms1
-               $('#send_sms').submit((e) => {
-                    e.preventDefault()
-                    source_num_sms = $('#MsgNumber').val()
-                    des_num_sms1 = destNumSmsInput.getNumber()
-                    body_msg = $("#message_body").val()
-                    $.ajax({
-                         url: SERVER + "voip/api_voip/send_sms_",
-                         async: true,
-                         crossDomain: true,
-                         crossOrigin: true,
-                         type: "POST",
-                         data: {
-                              "from_num": source_num_sms,
-                              "to_num": des_num_sms,
-                              'body': body_msg,
-                         },
-                         headers: { "Authorization": `${localStorage.getItem('user-token')}` }
-                    }).done(() => {
-                         swal({
-                              title: "message_send",
-                              text: "You have successfully send msg",
-                              icon: "success",
-                              timer: 2000
-                         });
-                         rest_compose();
-                    }).fail((err) => {
-                         swal({
-                              title: "not sending msg",
-                              text: "somthing went wrong.",
-                              icon: "error",
-                              timer: 2000
-                         });
-                         $('#send_sms').trigger("reset");
-                         console.log(err)
-                    })
-               })
-
-
-               function rest_compose() {
-                    document.getElementById("message_body").value = "";
-
-
-               }
-               function send_message() {
-                    var msg = document.getElementById("message_body").value;
-                    var today = new Date();
-
-                    //save message to database here.
-
-                    if (msg.trim() != "") {
-                         var div = document.createElement("div");
-                         div.className = "message sent col-md-9 col-11";
-                         var p = document.createElement("p");
-                         p.className = "col-md-12 col-12";
-                         var message = document.createTextNode(msg);
-                         var t = today.getHours() + ":" + today.getMinutes();
-                         var time = document.createTextNode(t);
-                         var span = document.createElement("span");
-                         p.appendChild(message);
-                         span.appendChild(time);
-                         div.appendChild(p);
-                         div.appendChild(span);
-                         objDiv.appendChild(div);
-                         document.getElementById("message")
-                         scroll_to_bottom();
+                         )
+                    }
+                    // function to play audio
+                    function playAudio(key) {
+                         console.log(key)
+                         var x = document.getElementById(key);
+                         x.play();
+                    }
+                    // function to pause audio
+                    function pauseAudio(key) {
+                         console.log(key)
+                         var x = document.getElementById(key);
+                         x.pause();
                     }
 
-               }
+                    // save notes and status to db
+                    $("#save_notes").click(() => {
+                         status = $('#status_val').val();
+                         notes = $('#notes_call').val();
+                         $.ajax({
+                              url: SERVER + "voip/api_voip/getlead",
+                              async: true,
+                              crossDomain: true,
+                              crossOrigin: true,
+                              type: "PUT",
+                              data: {
+                                   "pk": user_leads[index],
+                                   "notes": notes,
+                                   "status": status,
+                                   "last_dial_number": your_num
+                              },
+                              headers: { "Authorization": "Bearer " + localStorage.getItem('user-token') }
+                         }).done(() => {
+                              console.log("done")
+                              swal({
+                                   title: "notes saved",
+                                   text: "You have successfully saved notes",
+                                   icon: "success",
+                                   timer: 2000
+                              })
+                              location.reload()
+                         }).fail((err) => {
+                              console.log(err)
+                         })
+                    })
 
-               var objDiv = document.getElementById("message-box");
-               var scrollBtn = document.getElementById("scroll-btn");
-               var maxScrollValue = 0;
+                    $(document).ready(function () {
+                         $('[data-toggle="tooltip"]').tooltip();
+                    });
+                    const destNumSmsInputField = document.querySelector("#dest_num_sms");
+                    const destNumSmsInput = window.intlTelInput(destNumSmsInputField, {
+                         utilsScript:
+                              "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+                    });
 
-               /*SCROLL MESSAGE BOX TO BOTTOM*/
-               function scroll_to_bottom() {
+                    // For send messages and show chats
+                    var des_num_sms1
+                    $('#send_sms').submit((e) => {
+                         e.preventDefault()
+                         source_num_sms = $('#MsgNumber').val()
+                         des_num_sms1 = destNumSmsInput.getNumber()
+                         body_msg = $("#message_body").val()
+                         $.ajax({
+                              url: SERVER + "voip/api_voip/send_sms_",
+                              async: true,
+                              crossDomain: true,
+                              crossOrigin: true,
+                              type: "POST",
+                              data: {
+                                   "from_num": source_num_sms,
+                                   "to_num": des_num_sms,
+                                   'body': body_msg,
+                              },
+                              headers: { "Authorization": `${localStorage.getItem('user-token')}` }
+                         }).done(() => {
+                              swal({
+                                   title: "message_send",
+                                   text: "You have successfully send msg",
+                                   icon: "success",
+                                   timer: 2000
+                              });
+                              rest_compose();
+                         }).fail((err) => {
+                              swal({
+                                   title: "not sending msg",
+                                   text: "somthing went wrong.",
+                                   icon: "error",
+                                   timer: 2000
+                              });
+                              $('#send_sms').trigger("reset");
+                              console.log(err)
+                         })
+                    })
+
+
+                    function rest_compose() {
+                         document.getElementById("message_body").value = "";
+
+
+                    }
+                    function send_message() {
+                         var msg = document.getElementById("message_body").value;
+                         var today = new Date();
+
+                         //save message to database here.
+
+                         if (msg.trim() != "") {
+                              var div = document.createElement("div");
+                              div.className = "message sent col-md-9 col-11";
+                              var p = document.createElement("p");
+                              p.className = "col-md-12 col-12";
+                              var message = document.createTextNode(msg);
+                              var t = today.getHours() + ":" + today.getMinutes();
+                              var time = document.createTextNode(t);
+                              var span = document.createElement("span");
+                              p.appendChild(message);
+                              span.appendChild(time);
+                              div.appendChild(p);
+                              div.appendChild(span);
+                              objDiv.appendChild(div);
+                              document.getElementById("message")
+                              scroll_to_bottom();
+                         }
+
+                    }
+
                     var objDiv = document.getElementById("message-box");
-                    objDiv.scrollTop = objDiv.scrollHeight;
-                    if (maxScrollValue < objDiv.scrollTop)
-                         maxScrollValue = objDiv.scrollTop;
-               }
-               scroll_to_bottom();
+                    var scrollBtn = document.getElementById("scroll-btn");
+                    var maxScrollValue = 0;
 
-          </script>
+                    /*SCROLL MESSAGE BOX TO BOTTOM*/
+                    function scroll_to_bottom() {
+                         var objDiv = document.getElementById("message-box");
+                         objDiv.scrollTop = objDiv.scrollHeight;
+                         if (maxScrollValue < objDiv.scrollTop)
+                              maxScrollValue = objDiv.scrollTop;
+                    }
+                    scroll_to_bottom();
+
+               </script>
 </body>
 
 </html>
