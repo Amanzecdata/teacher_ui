@@ -158,17 +158,18 @@
         }
 
         /* <!-- add lession modal --> */
-        /* #create_modal {
+        #create_modal {
             position: fixed;
-            top: 20%;
-            left: 40%;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             width: 30%;
             z-index: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             border-radius: .3rem;
-            box-shadow: 0 0 10px rgb(46, 46, 46);
+            box-shadow: 0 0 10px rgb(46, 46, 46);   
         }
 
         .add_class_modal {
@@ -179,7 +180,8 @@
             height: 100%;
             background-color: rgba(0, 0, 0, 0.792);
             z-index: 1;
-        } */
+        }
+
         /* <!-- add lession modal --> */
     </style>
 </head>
@@ -195,7 +197,7 @@
                 <div class="container my-2">
                     <!-- add lession modal -->
 
-                    <!-- <div class="add_class_modal">
+                    <div class="add_class_modal">
                         <div class="" role="document" id="create_modal">
 
                             <div class="modal-content">
@@ -216,7 +218,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div> -->
+                    </div>
                     <!-- add lession modal -->
                     <div>
                         <div class="container start-container">
@@ -402,8 +404,6 @@
                             </div>
 
                             <div class="row">
-
-
                                 <div class="col-xs-12">
                                     <form id="lesson_form">
                                         <div class="speed_read" id="user_qr_url"
@@ -815,7 +815,7 @@
                                         </div>
                                         <div class="speed_read" id="question_choices"
                                             style="display: none; padding-top: 15px; ">
-                                            <div  data-type="question_choices"
+                                            <div data-type="question_choices"
                                                 style=" padding:20px; margin-top:50px; border-radius:10px; border:1px; border-color:#888; border-style:solid;">
                                                 <div class="row">
                                                     <h4 class="col-xs-7 col-lg-7">Question Cho--ices</h4>
@@ -1385,100 +1385,100 @@
         }
     </script>
     <script>
-        // $("#addNewLesson").click(function (e) {
-        //     var lesson_name = $("#lesson_name").val();
-        //     var lesson_visiblity = $("#lesson_is_public").prop("checked");
-        //     var meta_attributes = [];
-        //     var flashcards = [];
+        $("#addNewLesson").click(function (e) {
+            var lesson_name = $("#lesson_name").val();
+            var lesson_visiblity = $("#lesson_is_public").prop("checked");
+            var meta_attributes = [];
+            var flashcards = [];
 
-        //     data_ = {
-        //         lesson_name: lesson_name,
-        //         lesson_is_public: lesson_visiblity,
-        //     };
-        //     data_.meta_attributes = meta_attributes.join(",");
-        //     data_.flashcards = flashcards;
-        //     $.ajax({
-        //         url: SERVER + "courses_api/lesson/create",
-        //         data: JSON.stringify(data_),
-        //         type: "POST",
-        //         contentType: "application/json",
-        //         headers: { "Authorization": "Bearer " + localStorage.getItem("user-token") },
-        //         success: function (data) {
-        //             var currentPathName = window.location.pathname;
-        //             window.location.replace(currentPathName + "?lesson_id=" + data.id);
-        //             swal({
-        //                 title: "Lesson Created",
-        //                 text: "You have successfully created a lesson",
-        //                 icon: "success",
-        //                 timer: 2000,
-        //             });
-        //         },
-        //         error: (err) => {
-        //             swal({
-        //                 title: "Error Creating Lesson",
-        //                 text: err,
-        //                 icon: "error",
-        //             });
-        //         }
-        //     });
-        // });
+            data_ = {
+                lesson_name: lesson_name,
+                lesson_is_public: lesson_visiblity,
+            };
+            data_.meta_attributes = meta_attributes.join(",");
+            data_.flashcards = flashcards;
+            $.ajax({
+                url: SERVER + "courses_api/lesson/create",
+                data: JSON.stringify(data_),
+                type: "POST",
+                contentType: "application/json",
+                headers: { "Authorization": "Bearer " + localStorage.getItem("user-token") },
+                success: function (data) {
+                    var currentPathName = window.location.pathname;
+                    window.location.replace(currentPathName + "?lesson_id=" + data.id);
+                    swal({
+                        title: "Lesson Created",
+                        text: "You have successfully created a lesson",
+                        icon: "success",
+                        timer: 2000,
+                    });
+                },
+                error: (err) => {
+                    swal({
+                        title: "Error Creating Lesson",
+                        text: err,
+                        icon: "error",
+                    });
+                }
+            });
+        });
 
-        // $(document).ready(function () {
-        //     const params = new URLSearchParams(window.location.search);
-        //     var qs = params.get('lesson_id');
-        //     // console.log(qs);
-        //     if (qs == null || qs == 0) {
-        //         $('#create_modal').show();
-        //     } else {
-        //         $('#create_modal').hide();
-        //         $('.add_class_modal').css('position', 'relative');
-        //     }
-        //     $.ajax({
-        //         url: SERVER + "courses_api/lesson/all",
-        //         async: true,
-        //         crossDomain: true,
-        //         crossOrigin: true,
-        //         type: "GET",
-        //         headers: { "Authorization": "Bearer " + localStorage.getItem("user-token") },
-        //     }).done((response2) => {
-        //         let wwww = [response2]
-        //         for (var lesson of wwww) {
-        //             if (lesson.lesson_name === "") {
-        //                 lesson.lesson_name = 'No Title';
-        //             }
-        //             $("#select_lesson_new").append(
-        //                 "<li style='padding: 5px 10px;border-bottom: 1px solid;' value='" + lesson.id + "'><a href = /lesson.html?lesson_id=" + lesson.id + ">" + lesson.lesson_name + "</a><li>"
-        //             );
-        //         }
-        //     });
-        $.ajax({
-            url: SERVER + "courses_api/lesson/read/" + lesson_id,
-            type: "GET",
-            crossDomain: true,
-            contentType: "application/json",
-            headers: { "Authorization": "Bearer " + localStorage.getItem("user-token") },
-            success: function (response) {
-                var flashcards = response.flashcards;
+        $(document).ready(function () {
+            const params = new URLSearchParams(window.location.search);
+            var qs = params.get('lesson_id');
+            // console.log(qs);
+            if (qs == null || qs == 0) {
+                $('#create_modal').show();
+            } else {
+                $('#create_modal').hide();
+                $('.add_class_modal').css('position', 'relative');
+            }
+            $.ajax({
+                url: SERVER + "courses_api/lesson/all",
+                async: true,
+                crossDomain: true,
+                crossOrigin: true,
+                type: "GET",
+                headers: { "Authorization": "Bearer " + localStorage.getItem("user-token") },
+            }).done((response2) => {
+                let wwww = [response2]
+                for (var lesson of wwww) {
+                    if (lesson.lesson_name === "") {
+                        lesson.lesson_name = 'No Title';
+                    }
+                    $("#select_lesson_new").append(
+                        "<li style='padding: 5px 10px;border-bottom: 1px solid;' value='" + lesson.id + "'><a href = /lesson.html?lesson_id=" + lesson.id + ">" + lesson.lesson_name + "</a><li>"
+                    );
+                }
+            });
+            $.ajax({
+                url: SERVER + "courses_api/lesson/read/" + lesson_id,
+                type: "GET",
+                crossDomain: true,
+                contentType: "application/json",
+                headers: { "Authorization": "Bearer " + localStorage.getItem("user-token") },
+                success: function (response) {
+                    var flashcards = response.flashcards;
+                    var i = 0;
+                    flashcards.forEach((flashcard) => {
+                        i++;
+                        const lssn_qustion = flashcard.question;
+                        const qustion_nbr = flashcard.question;
+                        const lssn_type = flashcard.lesson_type;
+                        let lssn_name = lssn_type.replace("_", " ");
+                        $('#question_list').append("<a href=#" + lssn_type + " class='qustion_number'> <span>" + i + "</span> <span style='text-transform: capitalize;margin-left: 10px;'>" + lssn_name + "</span></a>");
+                    });
+                }
+            });
+            function sortEventHandler() {
                 var i = 0;
-                flashcards.forEach((flashcard) => {
+                var childrenList = $("#sortable").children();
+                childrenList.each(function (e) {
+                    $(this).attr("data-position", i)
                     i++;
-                    const lssn_qustion = flashcard.question;
-                    const qustion_nbr = flashcard.question;
-                    const lssn_type = flashcard.lesson_type;
-                    let lssn_name = lssn_type.replace("_", " ");
-                    $('#question_list').append("<a href=#" + lssn_type + " class='qustion_number'> <span>" + i + "</span> <span style='text-transform: capitalize;margin-left: 10px;'>" + lssn_name + "</span></a>");
-                });
+                })
             }
         });
-        function sortEventHandler() {
-            var i = 0;
-            var childrenList = $("#sortable").children();
-            childrenList.each(function (e) {
-                $(this).attr("data-position", i)
-                i++;
-            })
-        }
-        // });
 
     </script>
 </body>
